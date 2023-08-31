@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gaama Music</title>
+    <link rel="stylesheet" href="Gaama.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Specifications">SPECIFICATIONS</a></li>
+                <li><a href="#Products">PRODUCTS</a></li>
+                <li><a href="#Connects">CONNECT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE <br> REAL <br> SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click here to Listen</p>
+                <img src="Images/play.png" id="icon">
+            </div>
+        </div>
+        </div>
+        <audio id="mysong">
+            <source src="Images/EMIWAY  COMPANY OFFICIAL MUSIC VIDEO.mp3", type="audio/mp3">
+        </audio>
+
+        <script>
+            var mysong = document.getElementById("mysong");
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function(){
+               if(mysong.paused){
+                mysong.play();
+                icon.src = "Images/pause.png";
+               }else{
+                mysong.pause();
+                icon.src = "Images/play.png";
+               }
+            }
+
+        </script>
